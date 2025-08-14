@@ -136,7 +136,7 @@ resource "docker_container" "prometheus" {
 
 resource "docker_container" "grafana" {
  name = var.grafana.container_name
- image = "grafana/grafana"
+ image = "grafana/grafana:latest"
 
  ports {
  	internal = 3000
