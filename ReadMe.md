@@ -11,14 +11,14 @@ This project sets up a scalable background removal service using Docker containe
 - RabbitMQ task queue management
 
 ## Prerequisites
-1. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+1. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 2. [Docker](https://docs.docker.com/get-docker/)
 
 ## Setup Instructions
 ### 0. Clone the project 
 ```bash
-git clone 
-cd 
+git clone https://github.com/DenisCybersec/Sample-Project
+cd Sample-Project
 ```
 ### 1. Initialize Terraform
 
