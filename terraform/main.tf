@@ -24,9 +24,6 @@ resource "docker_volume" "outputs" {
   name = "outputs_vol"
 }
 
-locals{
-	ssh_keys = chomp(file(pathexpand(var.ssh_keys_path)))
-}
 # Docker networks setup
 resource "docker_network" "metrics_network" {
 	name = var.inner_network.name
