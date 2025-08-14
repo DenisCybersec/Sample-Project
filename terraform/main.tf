@@ -188,7 +188,6 @@ volumes {
     }
     networks_advanced {
 	    name = docker_network.rabbitmq_network.name
-	    aliases = [var.rabbitmq.network_name]
     }
     env = [
         "RABBITMQ_HOST=${var.rabbitmq.network_name}",
@@ -212,7 +211,6 @@ volumes {
   }
     networks_advanced {
 	    name = docker_network.rabbitmq_network.name
-	    aliases = [var.rabbitmq.network_name]
     }  
     env = [
         "RABBITMQ_HOST=${var.rabbitmq.network_name}",
@@ -220,4 +218,9 @@ volumes {
         "RABBITMQ_USER=${var.rabbitmq.login}",
         "RABBITMQ_PASSWORD=${var.rabbitmq.password}"
     ]
+depends_on = [
+  docker_container.rabbitmq,
+  docker_network.rabbitmq_network
+  ]
+restart = "always"
 }
